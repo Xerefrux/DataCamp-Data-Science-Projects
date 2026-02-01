@@ -1,5 +1,5 @@
 import sys
-import logging
+from logger import logging
 def error_messsage_detail(error, error_detail: sys):
     _, _, exc_tb = error_detail.exc_info()
     filename = exc_tb.tb_frame.f_code.co_filename
@@ -17,7 +17,7 @@ class CustomException(Exception):
         
     def __str__(self):
         return self.error_message
-    
+
 
         
         
